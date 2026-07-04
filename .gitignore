@@ -1,0 +1,30 @@
+# Large sources & backups — not served on the web
+seg_polygons.geojson
+seg_predictions_219k.pmtiles
+SEG_BBOX_ven_AI_Pred.json
+seg_predictions.local-backup.pmtiles
+seg_predictions.backup-*.pmtiles
+
+# Superseded / local-only
+*.dc.html
+EMSR884 Venezuela Earthquake.html
+build_pmtiles.sh
+seg_predictions.pmtiles
+footprints_maxsev.pmtiles
+aoi_polygons.geojson
+aoi_predictions.json
+aoi_coverage.geojson
+00304-FirozeA.pdf
+*.README.TXT
+*_README.TXT
+
+# Editor / tooling
+.claude/
+.DS_Store
+*.crdownload
+skills-lock.json
+
+# Backend / agent tooling — not part of the static site
+.mcp.json
+.agents/
+supabase/
