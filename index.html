@@ -412,17 +412,17 @@
     <div class="dash-body">
       <div class="dash-card" style="--accent:#c0554b;">
         <span class="dc-lbl">Predicted damage &middot; Venezuela earthquake</span>
-        <span class="dc-sub">Across ~352 km&sup2; we assessed 478,467 buildings,</span>
-        <div class="dc-hero"><span class="dc-hero-num">80,913</span><span class="dc-hero-sub">buildings affected &middot; 16.9%</span></div>
+        <span class="dc-sub">Across ~352 km&sup2; we assessed 447,263 buildings,</span>
+        <div class="dc-hero"><span class="dc-hero-num">76,378</span><span class="dc-hero-sub">buildings affected &middot; 17.1%</span></div>
         <div class="stack-bar">
-          <span style="width:83.1%;background:#5c9a74;" title="Intact 83.1%"></span>
-          <span style="width:15.7%;background:#c6864a;" title="Damaged 15.7%"></span>
-          <span style="width:1.2%;background:#c0554b;" title="Destroyed 1.2%"></span>
+          <span style="width:82.9%;background:#5c9a74;" title="Intact 82.9%"></span>
+          <span style="width:15.8%;background:#c6864a;" title="Damaged 15.8%"></span>
+          <span style="width:1.3%;background:#c0554b;" title="Destroyed 1.3%"></span>
         </div>
         <div class="dc-legend">
-          <span><i style="background:#5c9a74;"></i>Intact&nbsp;<b>397,554</b>&nbsp;&middot;&nbsp;83.1%</span>
-          <span><i style="background:#c6864a;"></i>Damaged&nbsp;<b>75,138</b>&nbsp;&middot;&nbsp;15.7%</span>
-          <span><i style="background:#c0554b;"></i>Destroyed&nbsp;<b>5,775</b>&nbsp;&middot;&nbsp;1.2%</span>
+          <span><i style="background:#5c9a74;"></i>Intact&nbsp;<b>370,885</b>&nbsp;&middot;&nbsp;82.9%</span>
+          <span><i style="background:#c6864a;"></i>Damaged&nbsp;<b>70,727</b>&nbsp;&middot;&nbsp;15.8%</span>
+          <span><i style="background:#c0554b;"></i>Destroyed&nbsp;<b>5,651</b>&nbsp;&middot;&nbsp;1.3%</span>
         </div>
       </div>
 
@@ -637,10 +637,10 @@ function saveCache(k,obj){ try{ localStorage.setItem(k, JSON.stringify(obj)); re
 // AI prediction layer (vector tiles).
 const AISEG_PMTILES = 'footprints_maxsev_512.pmtiles';
 const AISEG_MAXZOOM = 16;
-const AISEG_TOTALS = { Intact: 397554, Damaged: 75138, Destroyed: 5775 };
+const AISEG_TOTALS = { Intact: 370885, Damaged: 70727, Destroyed: 5651 };
 // Our per-AOI predicted footprint counts {d:destroyed, m:damaged, i:intact}, keyed by AOI number.
 // From the baked `aoi` tag in footprints_maxsev_512.pmtiles; 0 total => not evaluated there ("[Not evaluated Yet]").
-const AOI_PRED={0:{d:0,m:0,i:0},1:{d:19,m:21,i:100},2:{d:3877,m:18242,i:94128},3:{d:700,m:5589,i:114375},4:{d:68,m:9635,i:32381},5:{d:218,m:34125,i:84808},6:{d:28,m:441,i:18473},7:{d:0,m:0,i:0},8:{d:0,m:0,i:0},9:{d:0,m:0,i:0},10:{d:0,m:0,i:0},11:{d:21,m:1749,i:2265},12:{d:837,m:5292,i:50926}};
+const AOI_PRED={0:{d:0,m:0,i:0},1:{d:19,m:21,i:95},2:{d:3786,m:17183,i:86975},3:{d:690,m:5290,i:107183},4:{d:67,m:9044,i:30123},5:{d:217,m:32056,i:79157},6:{d:28,m:422,i:17351},7:{d:0,m:0,i:0},8:{d:0,m:0,i:0},9:{d:0,m:0,i:0},10:{d:0,m:0,i:0},11:{d:22,m:1650,i:2056},12:{d:822,m:5061,i:47945}};
 // Only AOIs present in aoi_coverage.geojson are shown; the rest are dropped.
 const COVERAGE_AOIS = new Set(['Antimano','Santa Cruz','Caracas','Caraballeda','Maracay','Moron','Villa de Cura','Petare']);
 function isCovered(a){ return !!a && COVERAGE_AOIS.has(a.name); }
