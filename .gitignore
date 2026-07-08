@@ -1,6 +1,7 @@
 # Large sources & backups — not served on the web
 seg_polygons.geojson
 final_maxsev_512.geojson
+venez_ssl_latest.geojson
 final_maxsev_512.raw.geojson
 seg_predictions_219k.pmtiles
 SEG_BBOX_ven_AI_Pred.json
